@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Building an Retail Store Assistant Using RAG (Retrieval Augmented Generation) and MCP
-image: "/posts/gen-ai-rag-title-img.png"
+image: "/img/posts/gen-ai-rag-title-img.png"
 tags: [GenAI, RAG, LLMs, Python, LangChain, MCP]
 ---
 
