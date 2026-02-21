@@ -9,16 +9,16 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Shrikant Keralapura
-description: "Hi I'm Shrikant, and I'm a Technology leader.  My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Please visit my Github & LinkedIn pages (or download my Resume) by using the links below!"
+description: "Hi I'm Shrikant, and I'm a Technology leader.  This page contains my portfolio of interesting projects I've recently undertaken, with a strong emphasis on understanding the building blocks and "what happens" under-the-hood. Please visit my Github & LinkedIn pages by using the links below!"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: Data Science <span style="color:#f58506"> Portfolio </span>
+subtitle: <span style="color:#f58506"> Portfolio of projects </span>
 location: "Indianapolis, USA"
 resume_url: /docs/resume.docx
-avatar_image: /img/profile_picture.jpg
+avatar_image: /img/profile_picture1.jpg
 
 #-------------------------------
 # Contact links
@@ -51,5 +51,6 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
