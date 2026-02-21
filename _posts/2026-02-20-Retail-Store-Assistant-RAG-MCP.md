@@ -14,7 +14,7 @@ A MCP client connection to a PostgreSQL database hosted on AWS which stores data
 A agent is setup to take the customer query, evaluate and route to the correct tool or MCP and generate grounded answers.
 
 **Key Objectives/Goals:**
-- Understand the building blocks for a multi-tool agentic system which can call inbuilt tools or external MCP servers.
+- Understand the building blocks for a multi-tool agentic system which can call inbuilt tools or external MCP servers
 - Understand how a end to end RAG system works
 - Considerations for prompt building
 - Understand how to instantiate and call MCP servers
