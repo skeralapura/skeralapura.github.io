@@ -157,7 +157,6 @@ text = docs[0].page_content
 ```
 
 <br>
-**Why this matters:**  Document loaders standardise the data into LangChain *Document* objects, which makes later steps like chunking and embedding seamless.
 
 ---
 
@@ -178,7 +177,6 @@ print(len(chunked_docs), "Q/A chunks")
 ```
 
 <br>
-**Why this matters:**  Chunking ensures retrieval focuses on the specific Q&A pair that relates to a user query.  Good chunking dramatically improves retrieval accuracy.
 
 ---
 
@@ -186,7 +184,7 @@ print(len(chunked_docs), "Q/A chunks")
 
 Embeddings convert text into **numeric vectors** that represent meaning.  Documents with similar meaning end up closer together in vector space.
 
-Embed each Q&A chunk and store the embeddings in Chroma:
+Embed each Q&A chunk and store the embeddings in Chroma DB.
 
 ```python
 from langchain_openai import OpenAIEmbeddings
@@ -211,7 +209,10 @@ vectorstore = Chroma(
     collection_name="retail_help_qa",
     embedding_function=embeddings)
 ```
+<br>
+**Note:** Langchain's FAISS can also be used here for storing to vector DB. Difference is that FAISS is a 'Similarity Search Library' vs Chroma is a 'Native Vector Database'. Chroma allows for more advanced metadata filtering (WHERE clauses). FAISS is better for high performance large datasets, whereas Chroma is good for fast prototyping and small/medium datasets.
 
+<br>
 ---
 
 ## LLM Setup <a name="rag-llm"></a>
@@ -251,9 +252,6 @@ Answer:
 ```
 
 <br>
-**Why this matters:**  Prompt templates are the *instructions* that govern how the LLM behaves.  They ensure the assistant is safe, grounded, and consistent.
-
-We have kept this simple here, but have included one important instruction for the LLM: that if the answer is not in the context, to say that it doesn't have this information and to encourage the customer to email human@retail-store.com
 
 ---
 
