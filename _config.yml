@@ -17,7 +17,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # About Section
 subtitle: <span style="color:#f58506"> Portfolio of projects </span>
 location: "Indianapolis, USA"
-avatar_image: /img/profile_picture1.jpg
+avatar_image: /img/profile_picture.jpg
 
 #-------------------------------
 # Contact links
@@ -50,6 +50,7 @@ defaults:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
 
 
 
