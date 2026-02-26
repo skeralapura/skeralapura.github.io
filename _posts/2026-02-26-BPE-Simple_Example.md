@@ -26,7 +26,9 @@ BPE is a type of subword-level tokenization. The BPE algorithm builds a vocabula
 *   Merge most frequent pair into a new token
     - Iterate through 'num_merges' (parameter) times
     - Repeat till desired vocab size
-    
+
+In practice, instead of implementing the algorithm from scratch, we can use a pretrained tokenizer (eg: AutoTokenizer), which was already trained on a large text corpus to build its vocabulary, such as the data used to train GPT-2 or another example would be TikToken library used by OpenAI models.
+<br>
 ___
 
 We start of with a sample corpus.
@@ -141,8 +143,4 @@ Merge 5: ('a', 'l') -> al
 
 Final Vocabulary: {('too',): 3, ('we', 't'): 1, ('to',): 2, ('g', 'o'): 1, ('ou', 't'): 1, (',',): 1, ('a', 'n', 'd'): 1, ('c', 'o', 'l', 'd'): 1, ('p', 'l', 'a', 'y'): 1, ('b', 'al', 'l'): 1, ('.',): 2, ('s', 'o'): 1, ('we',): 2, ('s', 'a', 't'): 1, ('i', 'n'): 1, ('t', 'h', 'e'): 1, ('h', 'ou', 's', 'e'): 1, ('d', 'i', 'd'): 1, ('n', 'o', 't', 'h', 'i', 'n', 'g'): 1, ('a', 't'): 1, ('al', 'l'): 1, ('w', 'h', 'i', 'c', 'h'): 1, ('i', 's'): 1, ('m', 'u', 'c', 'h'): 1, ('j', 'o', 'y'): 1, ('!',): 1}
 ```
-___
-
-In practice, instead of implementing the algorithm from scratch, we can use a pretrained tokenizer (eg: AutoTokenizer), which was already trained on a large text corpus to build its vocabulary, such as the data used to train GPT-2 or another example would be TikToken library used by OpenAI models.
-
 ___
