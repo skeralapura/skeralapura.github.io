@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Byte-Pair Encoding (BPE) Example
-image: "/posts/bpe.png"
+image: "/posts/BPE.png"
 tags: [Python, LLMs, BPE, Tokenizer]
 ---
 
