@@ -1,0 +1,41 @@
+---
+layout: post
+title: Byte-Pair Encoding (BPE) Example
+image: "/posts/coffee_python.jpg"
+tags: [Python, LLMs, BPE, Tokenizer]
+---
+
+# Example of building a Byte-Pair Encoding (BPE) algorithm
+
+This project showcases a simple example of how a BPE algorithm works. Tokenization is one of the main building blocks of LLM. Tokenization is a process of converting raw text into vectors that a neural network can understand.
+
+<br>
+**Pipeline:** Raw data (from internet and other sources) --> Tokenizer --> Transformers --> Output probabilities --> Human-Readable Output 
+
+Types of tokenization:
+* Word-level
+* Character-level
+* Subword-level
+
+BPE is a type of subword-level tokenization. The BPE algorithm builds a vocabulary iteratively using the following process:
+
+*   Start with individual characters (each character is a token)
+    - Extract all unique characters from corpus to create initial vocab
+*   Count all adjacent pairs of tokens in a text corpus
+    - Loop through each word (represented as a tuple of chars)
+    - Extract adjacent pairs of tokens
+    - Add the word’s frequency to each pair’s count
+*   Merge most frequent pair into a new token
+    - Iterate through 'num_merges' (parameter) times
+    - Repeat till desired vocab size
+    
+___
+
+We start of with a sample corpus.
+
+```python
+# Example corpus
+corpus = "Too wet to go out, And too cold to play ball. So we sat in the house. We did nothing at all which is too much joy!"
+```
+
+___
